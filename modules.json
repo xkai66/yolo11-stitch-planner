@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1",
+  "baseline": {
+    "name": "yolo11n",
+    "parameters_m": 2.62408,
+    "gflops": 6.6,
+    "note": "本地 summary_screen_20260829_004344.csv；此前摘要中的 2.59M/6.4GFLOPs 需统一口径后再写论文"
+  },
+  "validated": [
+    {"id":"A1","group":"A","name":"AFPN-P345","short":"AFPN-P345","role":"b","position":"Neck / 特征融合","delta_map5095":0.0597,"delta_params_m":0.0,"delta_gflops":0.0,"estimate":"已验证摘要；精确参数/GFLOPs以本地日志复核","source":"local-summary"},
+    {"id":"A2","group":"A","name":"RCSOSA","short":"RCSOSA","role":"a","position":"Backbone + Head / 特征变换","delta_map5095":0.0325,"delta_params_m":5.573776,"delta_gflops":null,"estimate":"已验证摘要；精确值以同口径报告复核","source":"local-summary"},
+    {"id":"A3","group":"A","name":"AFPN-P2345","short":"AFPN-P2345","role":"b","position":"Neck / 特征融合","delta_map5095":0.0039,"delta_params_m":null,"delta_gflops":null,"estimate":"已验证摘要；小目标 Recall 需同步检查","source":"local-summary"},
+    {"id":"A4","group":"A","name":"ELA-HSFPN-TADDH","short":"ELA-HSFPN-TADDH","role":"b+c","position":"Neck + Head / 融合与检测头","delta_map5095":0.0213,"delta_params_m":null,"delta_gflops":null,"estimate":"retry 摘要；不作为新模块已验证结果","source":"local-summary"}
+  ],
+  "new_recommendations": [
+    {"id":"B1","group":"B","name":"MobileNetV4-UIB-ExtraDW","short":"UIB·ExtraDW","role":"a","position":"Backbone / 轻量卷积变体","public_params":"MNv4-Conv-S 整体 3.8M；单块未报告","delta_params_m":0.14,"delta_gflops":0.15,"estimate":"工程估算 +0.03–0.25M/块、+0.05–0.30 GFLOPs；仅用于筛选，待实测","why":"低成本扩大感受野，保留局部纹理，适合小杂草边界","risk":"接口需对齐；不可整网替换","paper":"ECCV 2024","source_url":"https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05647.pdf","priority":"优先"},
+    {"id":"B2","group":"B","name":"Mamba-Adaptor","short":"Mamba-Adaptor","role":"a","position":"Backbone / 状态空间适配器","public_params":"单 adaptor 未报告","delta_params_m":0.20,"delta_gflops":0.25,"estimate":"工程估算 +0.05–0.35M/点、+0.10–0.60 GFLOPs；待实测","why":"多尺度空洞卷积 + 可学习记忆选择，兼顾叶片局部和行间上下文","risk":"实现/导出兼容性需 dry-run","paper":"CVPR 2025","source_url":"https://openaccess.thecvf.com/content/CVPR2025/html/Xie_Mamba-Adaptor_State_Space_Model_Adaptor_for_Visual_Recognition_CVPR_2025_paper.html","priority":"优先"},
+    {"id":"B3","group":"B","name":"ConvNeur-GlobalLocal","short":"ConvNeur","role":"a","position":"Backbone 或 Neck / 全局-局部解耦","public_params":"单块未报告","delta_params_m":0.24,"delta_gflops":0.35,"estimate":"工程估算 +0.08–0.40M/块、+0.15–0.80 GFLOPs；待实测","why":"局部细节分支与轻量全局记忆分开，适合背景相似与边界模糊场景","risk":"需压缩成 YOLO 单块，无现成接口","paper":"CVPR 2026","source_url":"https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Efficiency_Follows_Global-Local_Decoupling_CVPR_2026_paper.html","priority":"优先"},
+    {"id":"C1","group":"C","name":"EfficientViM-HSM-SSD","short":"HSM-SSD","role":"a","position":"Backbone P4/P5 / 状态空间混合","public_params":"单块未报告","delta_params_m":0.35,"delta_gflops":0.55,"estimate":"工程估算 +0.10–0.60M/块、+0.25–1.20 GFLOPs；待实测","why":"降低视觉 Mamba 的隐藏状态混合成本，增强遮挡和长条纹理上下文","risk":"状态维度和端侧算子可能拉低速度","paper":"CVPR 2025","source_url":"https://openaccess.thecvf.com/content/CVPR2025/html/Lee_Efficient_Vision_Mamba_with_Hidden_State_Mixer_based_State_CVPR_2025_paper.html","priority":"次选"},
+    {"id":"C2","group":"C","name":"WaveFormer-WPO","short":"WPO","role":"b","position":"Neck P3/P4 / 频域全局增强","public_params":"单模块未报告","delta_params_m":0.11,"delta_gflops":0.30,"estimate":"工程估算 +0.02–0.20M/块、+0.10–0.80 GFLOPs；待实测","why":"保留高频边界并建立全局一致性，适合模糊小杂草与叶片边缘","risk":"FFT/WPO端侧延迟需实测","paper":"AAAI 2026","source_url":"https://ojs.aaai.org/index.php/AAAI/article/view/39737","priority":"次选"},
+    {"id":"C3","group":"C","name":"CARE-DualInteraction","short":"CARE","role":"a","position":"Backbone 或 Neck / 轻量注意力","public_params":"单块未报告","delta_params_m":0.18,"delta_gflops":0.28,"estimate":"工程估算 +0.05–0.30M/块、+0.10–0.70 GFLOPs；待实测","why":"分离局部归纳偏置和长程依赖后双向交互，适合行间背景干扰","risk":"Transformer接口和显存开销不确定","paper":"CVPR 2025","source_url":"https://openaccess.thecvf.com/content/CVPR2025/html/Zhou_CARE_Transformer_Mobile-Friendly_Linear_Visual_Transformer_via_Decoupled_Dual_Interaction_CVPR_2025_paper.html","priority":"备用"}
+  ],
+  "optional_research": [
+    {"id":"R1","name":"P2-HighResolution-Integration","short":"P2高分辨率","role":"b","position":"Neck / P2浅层融合","public_params":"论文未报告单块参数","estimate":"CVPR 2026 workshop；待实测","why":"直接针对极小目标，但会增加显存/FLOPs","source_url":"https://openaccess.thecvf.com/content/CVPR2026W/AERO-HPR/html/S_Enhancing_Aerial_Pedestrian_Detection_via_High-Resolution_P2_Feature_Integration_in_CVPRW_2026_paper.html"}
+  ]
+}

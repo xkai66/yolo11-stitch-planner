@@ -1,5 +1,5 @@
 ﻿{
-  "updated_at": "2026-08-31T05:15:39+08:00",
+  "updated_at": "2026-08-31T05:16:22+08:00",
   "mode": "full-useful",
   "mode_label": "100轮正式训练",
   "summary_file": "合并所有 summary_full-useful_*.csv",
@@ -165,7 +165,7 @@
       "parameters_m": "",
       "layers": "",
       "gflops": "",
-      "runtime_seconds": 22.9,
+      "runtime_seconds": 65.5,
       "avg_epoch_seconds": "",
       "estimated_total_seconds": "",
       "delta_map5095": "",

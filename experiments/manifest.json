@@ -1,0 +1,14 @@
+{
+  "schema_version": "0.1",
+  "purpose": "同等精度优先FPS，同等速度优先mAP50-95",
+  "baseline": "yolo11.yaml",
+  "screen_epochs": 5,
+  "full_epochs": 100,
+  "plans": [
+    {"id":"S1-MM-AFPN345","yaml":"yolo11-stitch-S1-MM-AFPN345.yaml","a":"C3k2_MobileMamba(P4)","b":"AFPN-P345","c":"Detect_AFPN_P345","map5095_estimate":"0.25-0.33","fps_relative_estimate":"0.85-1.00x","params_estimate":"2.7-3.6M","chapter":"第4章结构改进；第5章a+b消融"},
+    {"id":"S2-EV-AFPN345","yaml":"yolo11-stitch-S2-EV-AFPN345.yaml","a":"C3k2_EfficientVIM(P4)","b":"AFPN-P345","c":"Detect_AFPN_P345","map5095_estimate":"0.24-0.32","fps_relative_estimate":"0.85-1.00x","params_estimate":"2.7-3.6M","chapter":"第4章轻量骨干；第5章横向比较"},
+    {"id":"S3-ELA-TADDH","yaml":"yolo11-stitch-S3-ELA-TADDH.yaml","a":"base C3k2","b":"ELA_HSFPN","c":"Detect_TADDH","map5095_estimate":"0.27-0.31","fps_relative_estimate":"0.70-0.95x","params_estimate":"约3.01M（已有retry实测）","chapter":"第4章Neck+Head；第5章强组合消融"},
+    {"id":"S4-MM-AFPN2345","yaml":"yolo11-stitch-S4-MM-AFPN2345.yaml","a":"C3k2_MobileMamba(P4)","b":"AFPN-P2345","c":"Detect_AFPN_P2345","map5095_estimate":"0.24-0.31","fps_relative_estimate":"0.80-0.98x","params_estimate":"2.8-3.8M","chapter":"第5章浅层融合消融"},
+    {"id":"S5-EV-TADDH","yaml":"yolo11-stitch-S5-EV-TADDH.yaml","a":"C3k2_EfficientVIM(P4)","b":"base PAN","c":"Detect_TADDH","map5095_estimate":"0.24-0.31","fps_relative_estimate":"0.80-0.98x","params_estimate":"2.8-3.8M","chapter":"第5章模块归因与组合"}
+  ]
+}

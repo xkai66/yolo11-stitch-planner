@@ -1,18 +1,18 @@
 ﻿{
-  "updated_at": "2026-08-30T19:55:04+08:00",
+  "updated_at": "2026-08-30T19:55:45+08:00",
   "mode": "screen",
   "mode_label": "5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_192717.csv",
   "total": 296,
-  "recorded": 1,
-  "trained": 0,
+  "recorded": 2,
+  "trained": 1,
   "interrupted": 1,
   "failed": 0,
   "skipped_oom": 0,
   "skipped_timeout": 0,
   "skipped_crash": 0,
   "build_ok": 0,
-  "pending": 295,
+  "pending": 294,
   "baseline": {
     "rank": "基准",
     "model": "基准",
@@ -86,19 +86,18 @@
     "estimated_total_seconds": 130.4
   },
   "current": {
-    "index": 2,
+    "index": 3,
     "total": 6,
-    "model": "yolo11-stitch-S2-EV-AFPN345.yaml",
+    "model": "yolo11-stitch-S3-ELA-TADDH.yaml",
     "total_epochs": 5,
-    "epoch": "5",
+    "phase": "训练准备中",
+    "epoch": 5,
     "batch": 157,
     "batch_total": 157,
     "speed_it_s": 3.44,
     "eta_seconds": 0.0,
     "eta_text": "约 0秒",
-    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_002_yolo11-stitch-S2-EV-AFPN3454",
-    "live_map5095": "0.3332",
-    "live_map50": "0.7085",
+    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_003_yolo11-stitch-S3-ELA-TADDH3",
     "active": true,
     "state": "训练中",
     "log": "batch_screen_20260830_192717.log"
@@ -130,6 +129,38 @@
     },
     {
       "rank": 1,
+      "model": "yolo11-stitch-S2-EV-AFPN345.yaml",
+      "status": "trained",
+      "best_epoch": "5",
+      "precision": "0.74905",
+      "recall": "0.63755",
+      "map50": "0.7085",
+      "map5095": "0.3332",
+      "parameters": "2646889",
+      "parameters_m": "2.646889",
+      "layers": "",
+      "gflops": "",
+      "delta_map5095": "+0.0655",
+      "delta_parameters_m": "+0.057",
+      "delta_screen_map5095": "+0.0655",
+      "module_usefulness": "初筛有用模块",
+      "verdict": "精度超过基准",
+      "convergence": "样本不足",
+      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
+      "log_evidence": "日志 status=trained · 完成 5/5 轮",
+      "error": "",
+      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_002_yolo11-stitch-S2-EV-AFPN345",
+      "module": "stitch-s2-ev-afpn345",
+      "position": "Neck / 特征融合",
+      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
+      "runtime_seconds": 338.5,
+      "avg_epoch_seconds": 67.7,
+      "estimated_total_seconds": 338.5,
+      "delta_runtime_seconds": "+208.1",
+      "data_status": "数据完整"
+    },
+    {
+      "rank": 2,
       "model": "yolo11-stitch-S1-MM-AFPN345.yaml",
       "status": "interrupted",
       "best_epoch": "",
@@ -161,24 +192,24 @@
       "data_status": "训练未正常收尾：不计入已训练；缺最终mAP：未完成验证"
     },
     {
-      "rank": 2,
-      "model": "yolo11-stitch-S2-EV-AFPN345.yaml",
+      "rank": 3,
+      "model": "yolo11-stitch-S3-ELA-TADDH.yaml",
       "status": "training",
       "best_epoch": "5",
       "precision": "",
       "recall": "",
-      "map50": "0.70850",
-      "map5095": "0.33320",
+      "map50": "",
+      "map5095": "",
       "parameters": "",
       "parameters_m": "",
       "layers": "",
       "gflops": "",
-      "runtime_seconds": 322.3,
-      "avg_epoch_seconds": 64.5,
-      "estimated_total_seconds": 322.3,
-      "delta_map5095": "+0.0655",
+      "runtime_seconds": 2.4,
+      "avg_epoch_seconds": 0.5,
+      "estimated_total_seconds": 2.4,
+      "delta_map5095": "",
       "delta_parameters_m": "",
-      "delta_screen_map5095": "+0.0655",
+      "delta_screen_map5095": "",
       "module_usefulness": "进行中 · 待完成5轮",
       "verdict": "当前训练中",
       "convergence": "未判断",
@@ -187,9 +218,9 @@
       "data_status": "实时训练中：最终指标待完成5轮验证",
       "error": "",
       "image_url": "",
-      "module": "stitch-s2-ev-afpn345",
-      "position": "Neck / 特征融合",
-      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互"
+      "module": "stitch-s3-ela-taddh",
+      "position": "Backbone / Neck（需按 YAML 逐层核对）",
+      "effect": "修改网络结构或算子，具体作用需结合 YAML 与源码核对"
     }
   ],
   "curves": [
@@ -232,6 +263,48 @@
           "map50": 0.64112,
           "precision": 0.64503,
           "recall": 0.60915
+        }
+      ]
+    },
+    {
+      "key": "yolo11-stitch-S2-EV-AFPN345.yaml",
+      "label": "yolo11-stitch-S2-EV-AFPN345.yaml",
+      "color": "#5a8f67",
+      "points": [
+        {
+          "epoch": 1.0,
+          "map5095": 0.00227,
+          "map50": 0.00779,
+          "precision": 0.00756,
+          "recall": 0.17457
+        },
+        {
+          "epoch": 2.0,
+          "map5095": 0.06246,
+          "map50": 0.22637,
+          "precision": 0.31426,
+          "recall": 0.32721
+        },
+        {
+          "epoch": 3.0,
+          "map5095": 0.17644,
+          "map50": 0.48968,
+          "precision": 0.53257,
+          "recall": 0.52389
+        },
+        {
+          "epoch": 4.0,
+          "map5095": 0.24122,
+          "map50": 0.61036,
+          "precision": 0.6345,
+          "recall": 0.58153
+        },
+        {
+          "epoch": 5.0,
+          "map5095": 0.3332,
+          "map50": 0.7085,
+          "precision": 0.74905,
+          "recall": 0.63755
         }
       ]
     }

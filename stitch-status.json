@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-30T18:29:27+08:00",
+  "updated_at": "2026-08-30T18:30:05+08:00",
   "mode": "screen",
   "mode_label": "5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_181205.csv",
   "total": 296,
-  "recorded": 3,
-  "trained": 2,
+  "recorded": 4,
+  "trained": 3,
   "interrupted": 0,
   "failed": 0,
   "skipped_oom": 0,
   "skipped_timeout": 1,
   "skipped_crash": 0,
   "build_ok": 0,
-  "pending": 293,
+  "pending": 292,
   "baseline": {
     "rank": "基准",
     "model": "基准",
@@ -86,19 +86,17 @@
     "estimated_total_seconds": 130.4
   },
   "current": {
-    "index": 4,
+    "index": 5,
     "total": 6,
-    "model": "yolo11-stitch-S4-ELA-AFPN345.yaml",
+    "model": "yolo11-stitch-S5-AFPN345-TADDH.yaml",
     "total_epochs": 5,
-    "epoch": "5",
+    "epoch": 5,
     "batch": 157,
     "batch_total": 157,
     "speed_it_s": 4.89,
     "eta_seconds": 0.0,
     "eta_text": "约 0秒",
-    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_004_yolo11-stitch-S4-ELA-AFPN345",
-    "live_map5095": "0.31042",
-    "live_map50": "0.67729",
+    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_005_yolo11-stitch-S5-AFPN345-TADDH2",
     "active": true,
     "state": "训练中",
     "log": "batch_screen_20260830_181205.log"
@@ -162,6 +160,38 @@
     },
     {
       "rank": 2,
+      "model": "yolo11-stitch-S4-ELA-AFPN345.yaml",
+      "status": "trained",
+      "best_epoch": "5",
+      "precision": "0.69241",
+      "recall": "0.63364",
+      "map50": "0.67729",
+      "map5095": "0.31042",
+      "parameters": "2778664",
+      "parameters_m": "2.778664",
+      "layers": "",
+      "gflops": "",
+      "delta_map5095": "+0.0427",
+      "delta_parameters_m": "+0.189",
+      "delta_screen_map5095": "+0.0427",
+      "module_usefulness": "初筛有用模块",
+      "verdict": "精度超过基准",
+      "convergence": "样本不足",
+      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
+      "log_evidence": "日志 status=trained · 完成 5/5 轮",
+      "error": "",
+      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_004_yolo11-stitch-S4-ELA-AFPN345",
+      "module": "stitch-s4-ela-afpn345",
+      "position": "Neck / 特征融合",
+      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
+      "runtime_seconds": 219.4,
+      "avg_epoch_seconds": 43.9,
+      "estimated_total_seconds": 219.4,
+      "delta_runtime_seconds": "+89.0",
+      "data_status": "数据完整"
+    },
+    {
+      "rank": 3,
       "model": "yolo11-stitch-S3-ELA-TADDH.yaml",
       "status": "trained",
       "best_epoch": "5",
@@ -193,7 +223,7 @@
       "data_status": "数据完整"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "model": "yolo11-stitch-S1-MM-AFPN345.yaml",
       "status": "skipped_timeout",
       "best_epoch": "",
@@ -225,24 +255,24 @@
       "data_status": "缺最终mAP：超时未完成5轮验证"
     },
     {
-      "rank": 4,
-      "model": "yolo11-stitch-S4-ELA-AFPN345.yaml",
+      "rank": 5,
+      "model": "yolo11-stitch-S5-AFPN345-TADDH.yaml",
       "status": "training",
       "best_epoch": "5",
       "precision": "",
       "recall": "",
-      "map50": "0.67729",
-      "map5095": "0.31042",
+      "map50": "",
+      "map5095": "",
       "parameters": "",
       "parameters_m": "",
       "layers": "",
       "gflops": "",
-      "runtime_seconds": 208.0,
-      "avg_epoch_seconds": 41.6,
-      "estimated_total_seconds": 208.0,
-      "delta_map5095": "+0.0427",
+      "runtime_seconds": 24.6,
+      "avg_epoch_seconds": 4.9,
+      "estimated_total_seconds": 24.6,
+      "delta_map5095": "",
       "delta_parameters_m": "",
-      "delta_screen_map5095": "+0.0427",
+      "delta_screen_map5095": "",
       "module_usefulness": "进行中 · 待完成5轮",
       "verdict": "当前训练中",
       "convergence": "未判断",
@@ -251,7 +281,7 @@
       "data_status": "实时训练中：最终指标待完成5轮验证",
       "error": "",
       "image_url": "",
-      "module": "stitch-s4-ela-afpn345",
+      "module": "stitch-s5-afpn345-taddh",
       "position": "Neck / 特征融合",
       "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互"
     }
@@ -338,6 +368,48 @@
           "map50": 0.7085,
           "precision": 0.74905,
           "recall": 0.63755
+        }
+      ]
+    },
+    {
+      "key": "yolo11-stitch-S4-ELA-AFPN345.yaml",
+      "label": "yolo11-stitch-S4-ELA-AFPN345.yaml",
+      "color": "#bd6248",
+      "points": [
+        {
+          "epoch": 1.0,
+          "map5095": 0.00079,
+          "map50": 0.00307,
+          "precision": 0.00429,
+          "recall": 0.15986
+        },
+        {
+          "epoch": 2.0,
+          "map5095": 0.11194,
+          "map50": 0.35716,
+          "precision": 0.36182,
+          "recall": 0.47081
+        },
+        {
+          "epoch": 3.0,
+          "map5095": 0.02181,
+          "map50": 0.05499,
+          "precision": 0.08132,
+          "recall": 0.4006
+        },
+        {
+          "epoch": 4.0,
+          "map5095": 0.2263,
+          "map50": 0.58331,
+          "precision": 0.61188,
+          "recall": 0.57491
+        },
+        {
+          "epoch": 5.0,
+          "map5095": 0.31042,
+          "map50": 0.67729,
+          "precision": 0.69241,
+          "recall": 0.63364
         }
       ]
     }

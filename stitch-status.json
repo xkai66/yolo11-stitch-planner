@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T19:26:46+08:00",
+  "updated_at": "2026-08-30T19:27:19+08:00",
   "mode": "screen",
   "mode_label": "5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_185506_retry3.csv",
@@ -94,11 +94,9 @@
     "epoch": "1",
     "live_map5095": "0.00327",
     "live_map50": "0.01316",
-    "eta_text": "—",
-    "active": false,
-    "state": "已停止",
-    "speed_it_s": null,
-    "eta_seconds": null,
+    "eta_text": "计算中…",
+    "active": true,
+    "state": "训练中",
     "log": "batch_screen_20260830_184906.log"
   },
   "ranking": [
@@ -447,5 +445,5 @@
       ]
     }
   ],
-  "pipeline_stage": "5轮初筛"
+  "pipeline_stage": "5screen"
 }

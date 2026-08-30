@@ -59,6 +59,7 @@
       <section class="card wide" id="liveStitch">
         <div class="section-head"><div><h2>本轮训练联动</h2><p>页面会读取同仓库的 <code>stitch-status.json</code>；没有同步文件时显示待启动。</p></div><span class="tag" id="liveBadge">等待同步</span></div>
         <div id="livePanel" class="empty-live">尚未收到本轮 5 轮初筛记录。训练启动后，监控同步脚本会更新当前模型、epoch、速度、mAP50-95 和完成数量。</div>
+        <div class="note">超时规则：正常按每个完整 epoch 平均不超过 180 秒；Windows 首轮会给数据加载、CUDA kernel/编译保留最多 360 秒预热窗口。超时只记为“未完成”，不进入有用模块或 100 轮名单；OOM、结构解析失败分别单独标记。</div>
       </section>
       <section class="card wide">
         <div class="section-head"><div><h2>本轮 5 个改进方案</h2><p>先跑 E0 基准 + S1–S5；mAP/FPS 仍是规划区间，参数已用接口 dry-run 实测，真实 CSV 覆盖后才可写论文。</p></div><span class="tag">5 candidates</span></div>

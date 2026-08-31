@@ -1,12 +1,13 @@
 ﻿{
-  "updated_at": "2026-08-31T15:03:43+08:00",
+  "updated_at": "2026-08-31T15:04:27+08:00",
   "mode": "screen",
   "mode_label": "当前6模型·5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_201618_final.csv",
   "total": 6,
   "recorded": 6,
   "trained": 5,
-  "interrupted": 1,
+  "interrupted": 0,
+  "incomplete": 1,
   "failed": 0,
   "skipped_oom": 0,
   "skipped_timeout": 0,
@@ -291,7 +292,7 @@
     {
       "rank": 6,
       "model": "yolo11-stitch-S1-MM-AFPN345.yaml",
-      "status": "interrupted",
+      "status": "incomplete",
       "best_epoch": "",
       "precision": "",
       "recall": "",
@@ -305,10 +306,10 @@
       "delta_parameters_m": "+0.071",
       "delta_screen_map5095": "",
       "module_usefulness": "数据不完整",
-      "verdict": "中途停止",
+      "verdict": "跳过/不兼容",
       "convergence": "未训练",
       "convergence_detail": "该模型未完成训练或未形成完整结果",
-      "log_evidence": "日志未正常收尾 · 完成 0/5 轮 · 不计入已训练 · 未记录结束错误",
+      "log_evidence": "结果不完整 · 仅记录 0/5 轮 · 不计入已训练",
       "error": "",
       "image_url": "",
       "module": "stitch-s1-mm-afpn345",
@@ -318,7 +319,7 @@
       "avg_epoch_seconds": "",
       "estimated_total_seconds": "",
       "delta_runtime_seconds": "+1168.3",
-      "data_status": "训练未正常收尾：不计入已训练；缺最终mAP：未完成验证"
+      "data_status": "结果不完整：不计入已训练；缺最终mAP：未完成验证"
     }
   ],
   "curves": [

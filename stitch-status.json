@@ -1,41 +1,41 @@
 ﻿{
-  "updated_at": "2026-08-31T13:56:55+08:00",
-  "mode": "screen",
-  "mode_label": "当前6模型·5轮初筛",
-  "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_201618_final.csv",
+  "updated_at": "2026-08-31T13:57:00+08:00",
+  "mode": "full",
+  "mode_label": "官方 YOLO 家族对照",
+  "summary_file": "",
   "total": 6,
-  "recorded": 6,
-  "trained": 5,
-  "interrupted": 1,
+  "recorded": 0,
+  "trained": 0,
+  "interrupted": 0,
   "failed": 0,
   "skipped_oom": 0,
   "skipped_timeout": 0,
   "skipped_crash": 0,
   "build_ok": 0,
-  "pending": 0,
+  "pending": 6,
   "baseline": {
     "rank": "基准",
-    "model": "基准",
-    "status": "reference_screen",
-    "best_epoch": "5",
-    "precision": "0.64503",
-    "recall": "0.60915",
-    "map50": "0.64112",
-    "map5095": "0.26768",
+    "model": "BASELINE · yolo11n（100轮）",
+    "status": "reference",
+    "best_epoch": "98",
+    "precision": "0.86791",
+    "recall": "0.81683",
+    "map50": "0.87627",
+    "map5095": "0.54809",
     "parameters": "2590230",
     "parameters_m": "2.590",
     "layers": "319",
     "gflops": "6.4",
     "module": "原始 YOLO11n",
     "position": "基准结构",
-    "effect": "作为5轮模块初筛的固定参照",
+    "effect": "作为所有改动模型的固定参照",
     "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/baseline_yolo11n_yaml7",
-    "convergence": "样本不足",
-    "convergence_detail": "5轮仅用于同预算比较",
-    "verdict": "基准",
-    "runtime_seconds": 130.4,
+    "convergence": "已收敛",
+    "convergence_detail": "最近10轮 mAP提升 +0.0081，P波动 0.0125，R波动 0.0092，验证损失变化 -0.0286",
+    "verdict": "固定参考",
+    "runtime_seconds": 2607.2,
     "avg_epoch_seconds": 26.1,
-    "estimated_total_seconds": 130.4
+    "estimated_total_seconds": 2607.2
   },
   "baseline_final": {
     "rank": "基准",
@@ -86,245 +86,81 @@
     "estimated_total_seconds": 130.4
   },
   "current": {
-    "index": 6,
+    "index": 1,
     "total": 6,
-    "model": "yolo11.yaml",
-    "total_epochs": 5,
-    "epoch": "5",
-    "batch": 157,
+    "model": "yolo26.yaml",
+    "total_epochs": 100,
+    "epoch": 23,
+    "batch": 59,
     "batch_total": 157,
-    "speed_it_s": null,
-    "eta_seconds": null,
-    "eta_text": "—",
-    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_006_yolo113",
-    "live_map5095": "0.22886",
-    "live_map50": "0.5737",
-    "active": false,
-    "state": "已停止",
-    "log": "batch_screen_20260830_192717.log"
+    "speed_it_s": 5.34,
+    "eta_seconds": 2282.2,
+    "eta_text": "约 38分02秒",
+    "active": true,
+    "state": "训练中",
+    "log": "batch_full_20260831_134315.log"
   },
   "ranking": [
     {
       "rank": "基准",
-      "model": "基准",
-      "status": "reference_screen",
-      "best_epoch": "5",
-      "precision": "0.64503",
-      "recall": "0.60915",
-      "map50": "0.64112",
-      "map5095": "0.26768",
+      "model": "BASELINE · yolo11n（100轮）",
+      "status": "reference",
+      "best_epoch": "98",
+      "precision": "0.86791",
+      "recall": "0.81683",
+      "map50": "0.87627",
+      "map5095": "0.54809",
       "parameters": "2590230",
       "parameters_m": "2.590",
       "layers": "319",
       "gflops": "6.4",
       "module": "原始 YOLO11n",
       "position": "基准结构",
-      "effect": "作为5轮模块初筛的固定参照",
+      "effect": "作为所有改动模型的固定参照",
       "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/baseline_yolo11n_yaml7",
-      "convergence": "样本不足",
-      "convergence_detail": "5轮仅用于同预算比较",
-      "verdict": "基准",
-      "runtime_seconds": 130.4,
+      "convergence": "已收敛",
+      "convergence_detail": "最近10轮 mAP提升 +0.0081，P波动 0.0125，R波动 0.0092，验证损失变化 -0.0286",
+      "verdict": "固定参考",
+      "runtime_seconds": 2607.2,
       "avg_epoch_seconds": 26.1,
-      "estimated_total_seconds": 130.4
+      "estimated_total_seconds": 2607.2
     },
     {
       "rank": 1,
-      "model": "yolo11-stitch-S2-EV-AFPN345.yaml",
-      "status": "trained",
-      "best_epoch": "5",
-      "precision": "0.74905",
-      "recall": "0.63755",
-      "map50": "0.7085",
-      "map5095": "0.3332",
-      "parameters": "2646889",
-      "parameters_m": "2.646889",
-      "layers": "",
-      "gflops": "",
-      "delta_map5095": "+0.0655",
-      "delta_parameters_m": "+0.057",
-      "delta_screen_map5095": "+0.0655",
-      "module_usefulness": "初筛有用模块",
-      "verdict": "精度超过基准",
-      "convergence": "样本不足",
-      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
-      "log_evidence": "日志 status=trained · 完成 5/5 轮",
-      "error": "",
-      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_002_yolo11-stitch-S2-EV-AFPN345",
-      "module": "stitch-s2-ev-afpn345",
-      "position": "Neck / 特征融合",
-      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
-      "runtime_seconds": 338.5,
-      "avg_epoch_seconds": 67.7,
-      "estimated_total_seconds": 338.5,
-      "delta_runtime_seconds": "+208.1",
-      "data_status": "数据完整"
-    },
-    {
-      "rank": 2,
-      "model": "yolo11-stitch-S4-ELA-AFPN345.yaml",
-      "status": "trained",
-      "best_epoch": "5",
-      "precision": "0.69241",
-      "recall": "0.63364",
-      "map50": "0.67729",
-      "map5095": "0.31042",
-      "parameters": "2778664",
-      "parameters_m": "2.778664",
-      "layers": "",
-      "gflops": "",
-      "delta_map5095": "+0.0427",
-      "delta_parameters_m": "+0.189",
-      "delta_screen_map5095": "+0.0427",
-      "module_usefulness": "初筛有用模块",
-      "verdict": "精度超过基准",
-      "convergence": "样本不足",
-      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
-      "log_evidence": "日志 status=trained · 完成 5/5 轮",
-      "error": "",
-      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_004_yolo11-stitch-S4-ELA-AFPN345",
-      "module": "stitch-s4-ela-afpn345",
-      "position": "Neck / 特征融合",
-      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
-      "runtime_seconds": 313.3,
-      "avg_epoch_seconds": 62.7,
-      "estimated_total_seconds": 313.3,
-      "delta_runtime_seconds": "+182.9",
-      "data_status": "数据完整"
-    },
-    {
-      "rank": 3,
-      "model": "yolo11-stitch-S5-AFPN345-TADDH.yaml",
-      "status": "trained",
-      "best_epoch": "5",
-      "precision": "0.60248",
-      "recall": "0.62127",
-      "map50": "0.60869",
-      "map5095": "0.25003",
-      "parameters": "2189445",
-      "parameters_m": "2.189445",
-      "layers": "",
-      "gflops": "",
-      "delta_map5095": "-0.0176",
-      "delta_parameters_m": "-0.401",
-      "delta_screen_map5095": "-0.0176",
-      "module_usefulness": "初筛未超过",
-      "verdict": "更轻但精度未超过",
-      "convergence": "样本不足",
-      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
-      "log_evidence": "日志 status=trained · 完成 5/5 轮",
-      "error": "",
-      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_005_yolo11-stitch-S5-AFPN345-TADDH",
-      "module": "stitch-s5-afpn345-taddh",
-      "position": "Neck / 特征融合",
-      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
-      "runtime_seconds": 307.1,
-      "avg_epoch_seconds": 61.4,
-      "estimated_total_seconds": 307.1,
-      "delta_runtime_seconds": "+176.7",
-      "data_status": "数据完整"
-    },
-    {
-      "rank": 4,
-      "model": "yolo11-stitch-S3-ELA-TADDH.yaml",
-      "status": "trained",
-      "best_epoch": "5",
-      "precision": "0.60797",
-      "recall": "0.59655",
-      "map50": "0.59767",
-      "map5095": "0.24393",
-      "parameters": "2320044",
-      "parameters_m": "2.320044",
-      "layers": "",
-      "gflops": "",
-      "delta_map5095": "-0.0237",
-      "delta_parameters_m": "-0.270",
-      "delta_screen_map5095": "-0.0237",
-      "module_usefulness": "初筛未超过",
-      "verdict": "更轻但精度未超过",
-      "convergence": "样本不足",
-      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
-      "log_evidence": "日志 status=trained · 完成 5/5 轮",
-      "error": "",
-      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_003_yolo11-stitch-S3-ELA-TADDH",
-      "module": "stitch-s3-ela-taddh",
-      "position": "Backbone / Neck（需按 YAML 逐层核对）",
-      "effect": "修改网络结构或算子，具体作用需结合 YAML 与源码核对",
-      "runtime_seconds": 253.3,
-      "avg_epoch_seconds": 50.7,
-      "estimated_total_seconds": 253.3,
-      "delta_runtime_seconds": "+122.9",
-      "data_status": "数据完整"
-    },
-    {
-      "rank": 5,
-      "model": "yolo11.yaml",
-      "status": "trained",
-      "best_epoch": "5",
-      "precision": "0.54514",
-      "recall": "0.59249",
-      "map50": "0.5737",
-      "map5095": "0.22886",
-      "parameters": "2624080",
-      "parameters_m": "2.62408",
-      "layers": "",
-      "gflops": "",
-      "delta_map5095": "-0.0388",
-      "delta_parameters_m": "+0.034",
-      "delta_screen_map5095": "-0.0388",
-      "module_usefulness": "初筛未超过",
-      "verdict": "未超过基准",
-      "convergence": "样本不足",
-      "convergence_detail": "仅有 5 个 epoch，至少需要 10 个 epoch 判断趋势",
-      "log_evidence": "日志 status=trained · 完成 5/5 轮",
-      "error": "",
-      "image_url": "/api/result-image?run_dir=C:/Users/xkai2/Desktop/训练集/yolov11/runs/batch_screen_006_yolo11",
-      "module": "原始 YOLO11n",
-      "position": "基准结构",
-      "effect": "作为所有改动模型的固定参照",
-      "runtime_seconds": 227.4,
-      "avg_epoch_seconds": 45.5,
-      "estimated_total_seconds": 227.4,
-      "delta_runtime_seconds": "+97.0",
-      "data_status": "数据完整"
-    },
-    {
-      "rank": 6,
-      "model": "yolo11-stitch-S1-MM-AFPN345.yaml",
-      "status": "interrupted",
-      "best_epoch": "",
+      "model": "yolo26.yaml",
+      "status": "training",
+      "best_epoch": "23",
       "precision": "",
       "recall": "",
       "map50": "",
       "map5095": "",
-      "parameters": "2661144",
-      "parameters_m": "2.661144",
+      "parameters": "",
+      "parameters_m": "",
       "layers": "",
       "gflops": "",
-      "delta_map5095": "",
-      "delta_parameters_m": "+0.071",
-      "delta_screen_map5095": "",
-      "module_usefulness": "数据不完整",
-      "verdict": "中途停止",
-      "convergence": "未训练",
-      "convergence_detail": "该模型未完成训练或未形成完整结果",
-      "log_evidence": "日志未正常收尾 · 完成 0/5 轮 · 不计入已训练 · 未记录结束错误",
-      "error": "",
-      "image_url": "",
-      "module": "stitch-s1-mm-afpn345",
-      "position": "Neck / 特征融合",
-      "effect": "改变多尺度特征融合路径，增强不同尺度目标信息交互",
-      "runtime_seconds": 1298.7,
+      "runtime_seconds": "",
       "avg_epoch_seconds": "",
       "estimated_total_seconds": "",
-      "delta_runtime_seconds": "+1168.3",
-      "data_status": "训练未正常收尾：不计入已训练；缺最终mAP：未完成验证"
+      "delta_map5095": "",
+      "delta_parameters_m": "",
+      "delta_screen_map5095": "",
+      "module_usefulness": "进行中 · 待完成100轮",
+      "verdict": "当前训练中",
+      "convergence": "未判断",
+      "convergence_detail": "当前模型尚未完成100轮，暂不判断收敛",
+      "log_evidence": "实时日志 · epoch 23 / 100 轮 · 5.34 it/s",
+      "data_status": "实时训练中：最终指标待完成100轮",
+      "error": "",
+      "image_url": "",
+      "module": "yolo26",
+      "position": "Backbone / Neck（需按 YAML 逐层核对）",
+      "effect": "修改网络结构或算子，具体作用需结合 YAML 与源码核对"
     }
   ],
   "curves": [
     {
       "key": "baseline",
-      "label": "基准",
+      "label": "BASELINE · yolo11n（100轮）",
       "color": "#e0a82e",
       "points": [
         {
@@ -361,93 +197,674 @@
           "map50": 0.64112,
           "precision": 0.64503,
           "recall": 0.60915
-        }
-      ]
-    },
-    {
-      "key": "yolo11-stitch-S2-EV-AFPN345.yaml",
-      "label": "yolo11-stitch-S2-EV-AFPN345.yaml",
-      "color": "#5a8f67",
-      "points": [
-        {
-          "epoch": 1.0,
-          "map5095": 0.00227,
-          "map50": 0.00779,
-          "precision": 0.00756,
-          "recall": 0.17457
         },
         {
-          "epoch": 2.0,
-          "map5095": 0.06246,
-          "map50": 0.22637,
-          "precision": 0.31426,
-          "recall": 0.32721
+          "epoch": 6.0,
+          "map5095": 0.33111,
+          "map50": 0.73039,
+          "precision": 0.69361,
+          "recall": 0.66098
         },
         {
-          "epoch": 3.0,
-          "map5095": 0.17644,
-          "map50": 0.48968,
-          "precision": 0.53257,
-          "recall": 0.52389
+          "epoch": 7.0,
+          "map5095": 0.31579,
+          "map50": 0.71824,
+          "precision": 0.68307,
+          "recall": 0.64323
         },
         {
-          "epoch": 4.0,
-          "map5095": 0.24122,
-          "map50": 0.61036,
-          "precision": 0.6345,
-          "recall": 0.58153
+          "epoch": 8.0,
+          "map5095": 0.36427,
+          "map50": 0.7451,
+          "precision": 0.73882,
+          "recall": 0.67648
         },
         {
-          "epoch": 5.0,
-          "map5095": 0.3332,
-          "map50": 0.7085,
-          "precision": 0.74905,
-          "recall": 0.63755
-        }
-      ]
-    },
-    {
-      "key": "yolo11-stitch-S4-ELA-AFPN345.yaml",
-      "label": "yolo11-stitch-S4-ELA-AFPN345.yaml",
-      "color": "#bd6248",
-      "points": [
-        {
-          "epoch": 1.0,
-          "map5095": 0.00079,
-          "map50": 0.00307,
-          "precision": 0.00429,
-          "recall": 0.15986
+          "epoch": 9.0,
+          "map5095": 0.40691,
+          "map50": 0.78656,
+          "precision": 0.7936,
+          "recall": 0.72029
         },
         {
-          "epoch": 2.0,
-          "map5095": 0.11194,
-          "map50": 0.35716,
-          "precision": 0.36182,
-          "recall": 0.47081
+          "epoch": 10.0,
+          "map5095": 0.40537,
+          "map50": 0.79813,
+          "precision": 0.79875,
+          "recall": 0.734
         },
         {
-          "epoch": 3.0,
-          "map5095": 0.02181,
-          "map50": 0.05499,
-          "precision": 0.08132,
-          "recall": 0.4006
+          "epoch": 11.0,
+          "map5095": 0.41899,
+          "map50": 0.8001,
+          "precision": 0.79042,
+          "recall": 0.72794
         },
         {
-          "epoch": 4.0,
-          "map5095": 0.2263,
-          "map50": 0.58331,
-          "precision": 0.61188,
-          "recall": 0.57491
+          "epoch": 12.0,
+          "map5095": 0.43309,
+          "map50": 0.80393,
+          "precision": 0.7904,
+          "recall": 0.7562
         },
         {
-          "epoch": 5.0,
-          "map5095": 0.31042,
-          "map50": 0.67729,
-          "precision": 0.69241,
-          "recall": 0.63364
+          "epoch": 13.0,
+          "map5095": 0.43083,
+          "map50": 0.81001,
+          "precision": 0.80086,
+          "recall": 0.74957
+        },
+        {
+          "epoch": 14.0,
+          "map5095": 0.45286,
+          "map50": 0.81664,
+          "precision": 0.81743,
+          "recall": 0.75462
+        },
+        {
+          "epoch": 15.0,
+          "map5095": 0.43751,
+          "map50": 0.81358,
+          "precision": 0.8063,
+          "recall": 0.75058
+        },
+        {
+          "epoch": 16.0,
+          "map5095": 0.44738,
+          "map50": 0.81848,
+          "precision": 0.81453,
+          "recall": 0.75579
+        },
+        {
+          "epoch": 17.0,
+          "map5095": 0.44608,
+          "map50": 0.8185,
+          "precision": 0.82382,
+          "recall": 0.75596
+        },
+        {
+          "epoch": 18.0,
+          "map5095": 0.4612,
+          "map50": 0.8257,
+          "precision": 0.82374,
+          "recall": 0.76157
+        },
+        {
+          "epoch": 19.0,
+          "map5095": 0.46149,
+          "map50": 0.82866,
+          "precision": 0.81588,
+          "recall": 0.76634
+        },
+        {
+          "epoch": 20.0,
+          "map5095": 0.46813,
+          "map50": 0.83113,
+          "precision": 0.81888,
+          "recall": 0.77098
+        },
+        {
+          "epoch": 21.0,
+          "map5095": 0.47722,
+          "map50": 0.83567,
+          "precision": 0.83052,
+          "recall": 0.77548
+        },
+        {
+          "epoch": 22.0,
+          "map5095": 0.47168,
+          "map50": 0.82847,
+          "precision": 0.81847,
+          "recall": 0.77302
+        },
+        {
+          "epoch": 23.0,
+          "map5095": 0.48458,
+          "map50": 0.83842,
+          "precision": 0.83226,
+          "recall": 0.78332
+        },
+        {
+          "epoch": 24.0,
+          "map5095": 0.47876,
+          "map50": 0.83875,
+          "precision": 0.82395,
+          "recall": 0.77723
+        },
+        {
+          "epoch": 25.0,
+          "map5095": 0.47023,
+          "map50": 0.83008,
+          "precision": 0.83066,
+          "recall": 0.77797
+        },
+        {
+          "epoch": 26.0,
+          "map5095": 0.48548,
+          "map50": 0.84203,
+          "precision": 0.83023,
+          "recall": 0.78018
+        },
+        {
+          "epoch": 27.0,
+          "map5095": 0.48748,
+          "map50": 0.84059,
+          "precision": 0.83957,
+          "recall": 0.77961
+        },
+        {
+          "epoch": 28.0,
+          "map5095": 0.497,
+          "map50": 0.84281,
+          "precision": 0.84194,
+          "recall": 0.78002
+        },
+        {
+          "epoch": 29.0,
+          "map5095": 0.4974,
+          "map50": 0.84665,
+          "precision": 0.83927,
+          "recall": 0.78598
+        },
+        {
+          "epoch": 30.0,
+          "map5095": 0.49969,
+          "map50": 0.84566,
+          "precision": 0.84146,
+          "recall": 0.77802
+        },
+        {
+          "epoch": 31.0,
+          "map5095": 0.49653,
+          "map50": 0.84909,
+          "precision": 0.84613,
+          "recall": 0.792
+        },
+        {
+          "epoch": 32.0,
+          "map5095": 0.49761,
+          "map50": 0.84387,
+          "precision": 0.83725,
+          "recall": 0.79371
+        },
+        {
+          "epoch": 33.0,
+          "map5095": 0.50374,
+          "map50": 0.85083,
+          "precision": 0.84862,
+          "recall": 0.80074
+        },
+        {
+          "epoch": 34.0,
+          "map5095": 0.49928,
+          "map50": 0.84331,
+          "precision": 0.844,
+          "recall": 0.78721
+        },
+        {
+          "epoch": 35.0,
+          "map5095": 0.5075,
+          "map50": 0.85111,
+          "precision": 0.84412,
+          "recall": 0.79101
+        },
+        {
+          "epoch": 36.0,
+          "map5095": 0.5015,
+          "map50": 0.85306,
+          "precision": 0.83636,
+          "recall": 0.79429
+        },
+        {
+          "epoch": 37.0,
+          "map5095": 0.50916,
+          "map50": 0.85655,
+          "precision": 0.84777,
+          "recall": 0.80327
+        },
+        {
+          "epoch": 38.0,
+          "map5095": 0.51051,
+          "map50": 0.85792,
+          "precision": 0.84267,
+          "recall": 0.80462
+        },
+        {
+          "epoch": 39.0,
+          "map5095": 0.50974,
+          "map50": 0.85402,
+          "precision": 0.84297,
+          "recall": 0.79689
+        },
+        {
+          "epoch": 40.0,
+          "map5095": 0.51613,
+          "map50": 0.85867,
+          "precision": 0.85166,
+          "recall": 0.79428
+        },
+        {
+          "epoch": 41.0,
+          "map5095": 0.51684,
+          "map50": 0.85799,
+          "precision": 0.84524,
+          "recall": 0.79695
+        },
+        {
+          "epoch": 42.0,
+          "map5095": 0.51365,
+          "map50": 0.85525,
+          "precision": 0.84948,
+          "recall": 0.79364
+        },
+        {
+          "epoch": 43.0,
+          "map5095": 0.5158,
+          "map50": 0.8587,
+          "precision": 0.8508,
+          "recall": 0.80467
+        },
+        {
+          "epoch": 44.0,
+          "map5095": 0.51874,
+          "map50": 0.86088,
+          "precision": 0.84571,
+          "recall": 0.80585
+        },
+        {
+          "epoch": 45.0,
+          "map5095": 0.52012,
+          "map50": 0.86104,
+          "precision": 0.8528,
+          "recall": 0.80241
+        },
+        {
+          "epoch": 46.0,
+          "map5095": 0.52066,
+          "map50": 0.86177,
+          "precision": 0.85124,
+          "recall": 0.80134
+        },
+        {
+          "epoch": 47.0,
+          "map5095": 0.52236,
+          "map50": 0.86166,
+          "precision": 0.84567,
+          "recall": 0.80213
+        },
+        {
+          "epoch": 48.0,
+          "map5095": 0.52075,
+          "map50": 0.85994,
+          "precision": 0.84164,
+          "recall": 0.803
+        },
+        {
+          "epoch": 49.0,
+          "map5095": 0.52029,
+          "map50": 0.85799,
+          "precision": 0.85135,
+          "recall": 0.79683
+        },
+        {
+          "epoch": 50.0,
+          "map5095": 0.52193,
+          "map50": 0.86327,
+          "precision": 0.85162,
+          "recall": 0.80712
+        },
+        {
+          "epoch": 51.0,
+          "map5095": 0.51904,
+          "map50": 0.86235,
+          "precision": 0.84655,
+          "recall": 0.80521
+        },
+        {
+          "epoch": 52.0,
+          "map5095": 0.52738,
+          "map50": 0.86827,
+          "precision": 0.85246,
+          "recall": 0.80875
+        },
+        {
+          "epoch": 53.0,
+          "map5095": 0.52796,
+          "map50": 0.86699,
+          "precision": 0.85779,
+          "recall": 0.80709
+        },
+        {
+          "epoch": 54.0,
+          "map5095": 0.52592,
+          "map50": 0.86274,
+          "precision": 0.85418,
+          "recall": 0.80491
+        },
+        {
+          "epoch": 55.0,
+          "map5095": 0.52662,
+          "map50": 0.86506,
+          "precision": 0.85935,
+          "recall": 0.80596
+        },
+        {
+          "epoch": 56.0,
+          "map5095": 0.52955,
+          "map50": 0.86524,
+          "precision": 0.85451,
+          "recall": 0.80675
+        },
+        {
+          "epoch": 57.0,
+          "map5095": 0.52813,
+          "map50": 0.86423,
+          "precision": 0.85398,
+          "recall": 0.80896
+        },
+        {
+          "epoch": 58.0,
+          "map5095": 0.52674,
+          "map50": 0.86284,
+          "precision": 0.85417,
+          "recall": 0.79833
+        },
+        {
+          "epoch": 59.0,
+          "map5095": 0.5316,
+          "map50": 0.86288,
+          "precision": 0.85464,
+          "recall": 0.80238
+        },
+        {
+          "epoch": 60.0,
+          "map5095": 0.53325,
+          "map50": 0.86698,
+          "precision": 0.85517,
+          "recall": 0.80702
+        },
+        {
+          "epoch": 61.0,
+          "map5095": 0.53076,
+          "map50": 0.86849,
+          "precision": 0.85441,
+          "recall": 0.81053
+        },
+        {
+          "epoch": 62.0,
+          "map5095": 0.53197,
+          "map50": 0.86762,
+          "precision": 0.85084,
+          "recall": 0.80981
+        },
+        {
+          "epoch": 63.0,
+          "map5095": 0.53136,
+          "map50": 0.86757,
+          "precision": 0.85012,
+          "recall": 0.81711
+        },
+        {
+          "epoch": 64.0,
+          "map5095": 0.53608,
+          "map50": 0.86817,
+          "precision": 0.85239,
+          "recall": 0.81181
+        },
+        {
+          "epoch": 65.0,
+          "map5095": 0.5349,
+          "map50": 0.87237,
+          "precision": 0.86133,
+          "recall": 0.8145
+        },
+        {
+          "epoch": 66.0,
+          "map5095": 0.53386,
+          "map50": 0.86908,
+          "precision": 0.85304,
+          "recall": 0.81178
+        },
+        {
+          "epoch": 67.0,
+          "map5095": 0.53783,
+          "map50": 0.86923,
+          "precision": 0.86113,
+          "recall": 0.81207
+        },
+        {
+          "epoch": 68.0,
+          "map5095": 0.53713,
+          "map50": 0.86884,
+          "precision": 0.85565,
+          "recall": 0.81648
+        },
+        {
+          "epoch": 69.0,
+          "map5095": 0.53795,
+          "map50": 0.87244,
+          "precision": 0.85606,
+          "recall": 0.81691
+        },
+        {
+          "epoch": 70.0,
+          "map5095": 0.53704,
+          "map50": 0.86994,
+          "precision": 0.85549,
+          "recall": 0.81976
+        },
+        {
+          "epoch": 71.0,
+          "map5095": 0.54017,
+          "map50": 0.87059,
+          "precision": 0.85738,
+          "recall": 0.81392
+        },
+        {
+          "epoch": 72.0,
+          "map5095": 0.53711,
+          "map50": 0.871,
+          "precision": 0.85598,
+          "recall": 0.82087
+        },
+        {
+          "epoch": 73.0,
+          "map5095": 0.54048,
+          "map50": 0.87279,
+          "precision": 0.85822,
+          "recall": 0.81243
+        },
+        {
+          "epoch": 74.0,
+          "map5095": 0.53887,
+          "map50": 0.87182,
+          "precision": 0.85604,
+          "recall": 0.81722
+        },
+        {
+          "epoch": 75.0,
+          "map5095": 0.53756,
+          "map50": 0.87095,
+          "precision": 0.86578,
+          "recall": 0.81153
+        },
+        {
+          "epoch": 76.0,
+          "map5095": 0.54008,
+          "map50": 0.87263,
+          "precision": 0.85699,
+          "recall": 0.81579
+        },
+        {
+          "epoch": 77.0,
+          "map5095": 0.54242,
+          "map50": 0.8734,
+          "precision": 0.86067,
+          "recall": 0.81709
+        },
+        {
+          "epoch": 78.0,
+          "map5095": 0.54271,
+          "map50": 0.87376,
+          "precision": 0.86411,
+          "recall": 0.81378
+        },
+        {
+          "epoch": 79.0,
+          "map5095": 0.54244,
+          "map50": 0.8751,
+          "precision": 0.85703,
+          "recall": 0.82063
+        },
+        {
+          "epoch": 80.0,
+          "map5095": 0.54269,
+          "map50": 0.87376,
+          "precision": 0.86304,
+          "recall": 0.8173
+        },
+        {
+          "epoch": 81.0,
+          "map5095": 0.54465,
+          "map50": 0.87585,
+          "precision": 0.86399,
+          "recall": 0.81918
+        },
+        {
+          "epoch": 82.0,
+          "map5095": 0.54291,
+          "map50": 0.87306,
+          "precision": 0.85929,
+          "recall": 0.81496
+        },
+        {
+          "epoch": 83.0,
+          "map5095": 0.54394,
+          "map50": 0.87375,
+          "precision": 0.86217,
+          "recall": 0.81609
+        },
+        {
+          "epoch": 84.0,
+          "map5095": 0.54317,
+          "map50": 0.87372,
+          "precision": 0.86504,
+          "recall": 0.81564
+        },
+        {
+          "epoch": 85.0,
+          "map5095": 0.54603,
+          "map50": 0.87596,
+          "precision": 0.86076,
+          "recall": 0.81555
+        },
+        {
+          "epoch": 86.0,
+          "map5095": 0.54475,
+          "map50": 0.87494,
+          "precision": 0.86595,
+          "recall": 0.81666
+        },
+        {
+          "epoch": 87.0,
+          "map5095": 0.5451,
+          "map50": 0.87383,
+          "precision": 0.85837,
+          "recall": 0.82232
+        },
+        {
+          "epoch": 88.0,
+          "map5095": 0.54498,
+          "map50": 0.87477,
+          "precision": 0.85776,
+          "recall": 0.81933
+        },
+        {
+          "epoch": 89.0,
+          "map5095": 0.54716,
+          "map50": 0.87539,
+          "precision": 0.85724,
+          "recall": 0.81799
+        },
+        {
+          "epoch": 90.0,
+          "map5095": 0.54617,
+          "map50": 0.87595,
+          "precision": 0.86392,
+          "recall": 0.8166
+        },
+        {
+          "epoch": 91.0,
+          "map5095": 0.54001,
+          "map50": 0.87233,
+          "precision": 0.85992,
+          "recall": 0.81515
+        },
+        {
+          "epoch": 92.0,
+          "map5095": 0.543,
+          "map50": 0.87427,
+          "precision": 0.86451,
+          "recall": 0.81959
+        },
+        {
+          "epoch": 93.0,
+          "map5095": 0.54417,
+          "map50": 0.87561,
+          "precision": 0.8706,
+          "recall": 0.81834
+        },
+        {
+          "epoch": 94.0,
+          "map5095": 0.54523,
+          "map50": 0.87553,
+          "precision": 0.87023,
+          "recall": 0.815
+        },
+        {
+          "epoch": 95.0,
+          "map5095": 0.54537,
+          "map50": 0.87506,
+          "precision": 0.87019,
+          "recall": 0.81041
+        },
+        {
+          "epoch": 96.0,
+          "map5095": 0.54669,
+          "map50": 0.8763,
+          "precision": 0.87079,
+          "recall": 0.81411
+        },
+        {
+          "epoch": 97.0,
+          "map5095": 0.54685,
+          "map50": 0.87579,
+          "precision": 0.86656,
+          "recall": 0.81943
+        },
+        {
+          "epoch": 98.0,
+          "map5095": 0.54809,
+          "map50": 0.87627,
+          "precision": 0.86791,
+          "recall": 0.81683
+        },
+        {
+          "epoch": 99.0,
+          "map5095": 0.54566,
+          "map50": 0.87525,
+          "precision": 0.86675,
+          "recall": 0.81747
+        },
+        {
+          "epoch": 100.0,
+          "map5095": 0.54777,
+          "map50": 0.87707,
+          "precision": 0.8724,
+          "recall": 0.81458
         }
       ]
     }
   ],
-  "pipeline_stage": "5screen"
+  "pipeline_stage": "family100"
 }

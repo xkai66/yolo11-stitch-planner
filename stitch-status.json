@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T20:07:03+08:00",
+  "updated_at": "2026-09-02T20:07:48+08:00",
   "mode": "screen",
   "mode_label": "当前6模型·5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_201618_final.csv",
@@ -91,7 +91,6 @@
     "total": 3,
     "model": "yolo11-stitch-S6-A2C2f-P4.yaml",
     "total_epochs": 5,
-    "phase": "数据准备中",
     "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_001_yolo11-stitch-S6-A2C2f-P4",
     "active": true,
     "state": "训练中",
@@ -333,7 +332,7 @@
       "parameters_m": "",
       "layers": "",
       "gflops": "",
-      "runtime_seconds": 29.0,
+      "runtime_seconds": 74.2,
       "avg_epoch_seconds": "",
       "estimated_total_seconds": "",
       "delta_map5095": "",

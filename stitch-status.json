@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T20:06:19+08:00",
+  "updated_at": "2026-09-02T20:07:03+08:00",
   "mode": "screen",
   "mode_label": "当前6模型·5轮初筛",
   "summary_file": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\logs\\batch_experiments\\summary_screen_20260830_201618_final.csv",
@@ -87,22 +87,15 @@
     "estimated_total_seconds": 130.4
   },
   "current": {
-    "index": 6,
-    "total": 6,
-    "model": "yolo11.yaml",
+    "index": 1,
+    "total": 3,
+    "model": "yolo11-stitch-S6-A2C2f-P4.yaml",
     "total_epochs": 5,
-    "epoch": "5",
-    "batch": 157,
-    "batch_total": 157,
-    "speed_it_s": null,
-    "eta_seconds": null,
-    "eta_text": "—",
-    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_006_yolo113",
-    "live_map5095": "0.22886",
-    "live_map50": "0.5737",
-    "active": false,
-    "state": "已停止",
-    "log": "batch_screen_20260830_192717.log"
+    "phase": "数据准备中",
+    "run_dir": "C:\\Users\\xkai2\\Desktop\\训练集\\yolov11\\runs\\batch_screen_001_yolo11-stitch-S6-A2C2f-P4",
+    "active": true,
+    "state": "训练中",
+    "log": "batch_screen_20260902_200628.log"
   },
   "ranking": [
     {
@@ -326,6 +319,37 @@
       "estimated_total_seconds": "",
       "delta_runtime_seconds": "+1168.3",
       "data_status": "结果不完整：不计入已训练；缺最终mAP：未完成验证"
+    },
+    {
+      "rank": 1,
+      "model": "yolo11-stitch-S6-A2C2f-P4.yaml",
+      "status": "training",
+      "best_epoch": "",
+      "precision": "",
+      "recall": "",
+      "map50": "",
+      "map5095": "",
+      "parameters": "",
+      "parameters_m": "",
+      "layers": "",
+      "gflops": "",
+      "runtime_seconds": 29.0,
+      "avg_epoch_seconds": "",
+      "estimated_total_seconds": "",
+      "delta_map5095": "",
+      "delta_parameters_m": "",
+      "delta_screen_map5095": "",
+      "module_usefulness": "进行中 · 待完成100轮",
+      "verdict": "当前训练中",
+      "convergence": "未判断",
+      "convergence_detail": "当前模型尚未完成100轮，暂不判断收敛",
+      "log_evidence": "实时日志 · epoch ? / 5 轮",
+      "data_status": "实时训练中：最终指标待完成100轮",
+      "error": "",
+      "image_url": "",
+      "module": "stitch-s6-a2c2f-p4",
+      "position": "Backbone / Neck（需按 YAML 逐层核对）",
+      "effect": "引入注意力或特征块，增强显著区域与特征表达"
     }
   ],
   "curves": [
